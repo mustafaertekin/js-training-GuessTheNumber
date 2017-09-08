@@ -5,15 +5,18 @@
 let currentStep = 1;
 let maxNumberOfStep = 5;
 let maxOfGeneratedNumber = 100;
-let generatedNumer = null;
+let generatedNumber = null;
 
 
 function generateANumber(pMax){
-    // TODO: Implement this function!
+    return pMax = Math.random()*maxOfGeneratedNumber;
+    // random methodu 0 ile 1 arasinda 0,....  küsürlü bir sayi verir
+    // 100 ile carparak 0 ile 100 arasinda bir sayi elde etmis oluruz
 }
 
 function resetGame(){
-    // TODO: Implement this function!
+    location.reload(true);    
+    // Calismadi yahu bu ?!  sayfayi refresh yapmak istedim ama olmadi
 }
 
 function getUserGuess(pText, pMax){

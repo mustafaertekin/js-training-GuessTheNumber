@@ -13,14 +13,15 @@ while(currentStep < maxNumberOfStep){
         feedback("Yeay! Sie haben das Spiel gewonnen!");
         resetGame();
         break;
-    }else{
-        // Eger kullanicinin girdigi sayi bilgisayarin tuttugundan kücük ise 
-        // "Lütfen sayiyi büyütünüz" Feedback ini verecek
-        // Tersi durumda da "Lütfen sayiyi kücültünüz" gösterecek
-        feedback("yaklastin");
     }
+    else if(userGuess < generatedNumber) {
+        feedback("Lütfen sayiyi büyütünüz");
+        }
+        else {
+        feedback("Lütfen sayiyi kücültünüz");
+        }
     
     currentStep++; // currentStep = currentStep + 1;
 }
 
-feedback("Oooh! Leider haben Sie das Spiel verloren!");
+feedback("Oooh! Leider haben Sie das Spiel verloren!");  
