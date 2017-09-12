@@ -11,17 +11,23 @@ while(currentStep < maxNumberOfStep){
     
     if(userGuess == generatedNumber){
         feedback("Yeay! Sie haben das Spiel gewonnen!");
-        resetGame();
-        break;
-    }
-    else if(userGuess < generatedNumber) {
-        feedback("Lütfen sayiyi büyütünüz");
+       if(confirm("Do you want to play again")){
+          resetGame();
+        } else {
+          break;
         }
-        else {
+    } else { 
+        if(userGuess < generatedNumber) {
+        feedback("Lütfen sayiyi büyütünüz");
+        } else {
         feedback("Lütfen sayiyi kücültünüz");
         }
+    }
     
     currentStep++; // currentStep = currentStep + 1;
 }
 
-feedback("Oooh! Leider haben Sie das Spiel verloren!");  
+if(currentStep === 5){
+    feedback("Oooh! Leider haben Sie das Spiel verloren!");
+    resetGame();
+}

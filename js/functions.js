@@ -15,8 +15,10 @@ function generateANumber(pMax){
 }
 
 function resetGame(){
-    location.reload(true);    
-    // Calismadi yahu bu ?!  sayfayi refresh yapmak istedim ama olmadi
+   currentStep = 1;
+   maxNumberOfStep = 5;
+   maxOfGeneratedNumber = 100;
+   generatedNumber = generateANumber(maxOfGeneratedNumber);
 }
 
 function getUserGuess(pText, pMax){
